@@ -1,0 +1,33 @@
+.container-fluid {
+  background-color: #0d0d0d;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.storename p {
+  text-align: center;
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 50px;
+  color: white;
+}
+
+.navbar .nav {
+  margin-top: -50px;
+  padding-top: 20px;
+  text-align: center;
+  border-top:1px solid #b7864e;
+}
+
+.nav li {
+  display: inline;
+  list-style: none;
+  color:#b7864e;
+  text-transform: uppercase;
+  margin-right: 40px;
+}
+
+.nav li:hover {
+  color: white;
+}
