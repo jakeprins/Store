@@ -1,6 +1,50 @@
-<h1><%= @inventory.name %></h1>
+<table class="table">
 
-<p><%= @inventory.description %></p>
-<p><%= @inventory.price %></p>
-<p><%= @inventory.quantity %></p>
-<p><%= @inventory.image %></p>
+  <tr>
+    <td>
+      <p></p>
+    </td>
+    <td>
+      <h1><%= @inventory.name %></h1>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Description:
+    </td>
+    <td>
+      <%= @inventory.description %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Price:
+    </td>
+    <td>
+      <%= @inventory.price %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      Currently in stock:
+    </td>
+    <td>
+      <%= @inventory.quantity %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <p></p>
+    </td>
+    <td>
+      <%= image_tag(@inventory.image) %>
+    </td>
+  </tr>
+
+</table>
+
+<%= link_to 'Back', '/inventory/' %>
