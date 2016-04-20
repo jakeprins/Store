@@ -28,6 +28,14 @@
   margin-right: 40px;
 }
 
-.nav li:hover {
+.nav li a:hover {
   color: white;
+}
+
+.nav li a:visited {
+  display: inline;
+  list-style: none;
+  color:#b7864e;
+  text-transform: uppercase;
+  margin-right: 40px;
 }
