@@ -10,30 +10,33 @@
 <body>
 <%= render "/shared/header" %>
 
-<div class="row">
+<div class="container">
+  <div class="row">
 
-  <div class="col-sm-12">
+    <div class="col-sm-12">
 
-    <ul class="no-bullets">
+      <ul class="no-bullets">
 
-      <% if !user_signed_in? %>
+        <% if !user_signed_in? %>
 
-        <li><%= link_to "Log in", new_user_session_path %></li>
+          <li><%= link_to "Log in", new_user_session_path %></li>
 
-      <% else %>
+        <% else %>
 
-        <li><span><%= current_user.email %> | <%= current_user.name %></li></span>
-        <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+          <li><span><%= current_user.email %> | <%= current_user.name %></li></span>
+          <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
 
-      <% end %>
+        <% end %>
 
-    </ul>
+      </ul>
 
+    </div>
+
+    <div class="margintop">
+      <%= yield %>
+    </div>
   </div>
-
-  <div class="margintop">
-    <%= yield %>
-  </div>
+</div>
 
 <%= render "/shared/footer" %>
 </body>
