@@ -1,0 +1,9 @@
+<h1>Your shopping cart</h1>
+
+<% @shopping_cart.each do |id, quantity| %>
+  <% @inventory = Inventory.find(id) %>
+    <p><%= @inventory.name %></p>
+    <p>Quantity: <%= quantity %></p>
+    <p>Price: <%= @inventory.price %> EUR</p>
+    <br>
+<% end %>
