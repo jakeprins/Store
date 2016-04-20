@@ -1,59 +1,45 @@
-<div align="center">
-<table class="tableShow">
-
-  <tr>
-    <td>
-      <p></p>
-    </td>
-    <td>
-      <h1><%= @inventory.name %></h1>
-    </td>
-  </tr>
-
-</table>
-
-<table class="tableShow"
-  <tr>
-    <td>
-      Description:
-    </td>
-    <td>
-      <%= @inventory.description %>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Price    align: center;:
-    </td>
-    <td>
-      <%= @inventory.price %>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Currently in stock:
-    </td>
-    <td>
-      <%= @inventory.quantity %>
-    </td>
-  </tr>
-</table>
-
-<table>
-
-  <tr>
-    <td>
-      <p></p>
-    </td>
-    <td>
-      <%= image_tag(@inventory.image) %>
-    </td>
-  </tr>
-
-</table>
-
+<div class="container">
+  <div class="container-show">
+    <div class="row">
+      <div class="col-xs-6 col-sm-4">
+        <div class="thumbnail">
+          <p>
+            <%= image_tag(@inventory.image) %>
+          </p>
+        </div>
+        <table>
+          <tr>
+            <td><strong>Name</strong></td>
+            <td><%= @inventory.name %></td>
+          </tr>
+          <tr>
+            <td><strong>Price</strong></td>
+            <td><%= @inventory.price %></td>
+          </tr>
+          <tr>
+            <td><strong>In stock</strong></td>
+            <td><%= @inventory.quantity %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-xs-6 col-sm-4">
+        <p style="font-size:120%">
+          <strong>Description</strong>
+        </p>
+        <p>
+          <%= @inventory.description %>
+        </p>
+      </div
+      <div class="col-xs-6 col-sm-4">
+        <p style="font-size:120%">
+          <strong>Review</strong>
+        </p>
+        <p>
+          Best in the world!!!</br>
+        <p>
+      </div>
+    </div>
+  </div>
 </div>
 <br>
 <br>
