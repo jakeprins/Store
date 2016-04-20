@@ -31,3 +31,16 @@ img {
 .page-header {
   20px;
 }
+
+.field-login input {
+  width: 33%;
+  height: 40px;
+  min-width: 300px;
+  text-align: center;
+  border: 0px;
+  border-bottom: 1px solid  #333333;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px  #1a1a1a;
+  margin: 10px;
+
+}
