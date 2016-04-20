@@ -8,14 +8,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render "/shared/header" %>
 
 <div class="container">
-  <div class="row">
+<<<<<<< HEAD
 
-    <div class="col-sm-12">
+  <div class="row row-top">
 
-      <ul class="no-bullets">
+    <div class="col-md-12 menu-items margin-top">
 
       <ul>
         <li><%= link_to "Home", root_path %></li>
@@ -37,21 +36,47 @@
       </ul>
 
     </div>
+=======
+  <div class="row">
 
+    <div class="col-sm-12">
+
+      <ul class="no-bullets">
+
+        <% if !user_signed_in? %>
+
+          <li><%= link_to "Log in", new_user_session_path %></li>
+
+        <% else %>
+
+          <li><span><%= current_user.email %> | <%= current_user.name %></li></span>
+          <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+
+        <% end %>
+
+      </ul>
+>>>>>>> 47b2c2d4a9087b81608a3cddba23bc8580e31733
+
+    </div>
+
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+    <%= yield %>
+=======
     <div class="margintop">
-
-
-
-
-
-
-
-
-
       <%= yield %>
+    </div>
+  </div>
+</div>
+>>>>>>> 47b2c2d4a9087b81608a3cddba23bc8580e31733
 
-  </div>
-  </div>
 </div>
 
 
