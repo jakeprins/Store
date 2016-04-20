@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :inventory
   resources :categories
 
-  root 'inventory#index'
+  root 'inventory#welcome'
 
 end
