@@ -10,4 +10,7 @@ class InventoryController < ApplicationController
   def create
   end
 
+  def welcome
+  end
+
 end
