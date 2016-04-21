@@ -19,14 +19,14 @@
   <div class="row text-center">
     <% total = 0 %>
       <% @shopping_cart.each do |id, quantity| %>
-        <% @inventory = Inventory.find(id) %>
-          <p><%= @inventory.name %></p>
-          <p>Quantity: <%= quantity %></p>
-          <p>Price: <%= @inventory.price %> &euro;</p>
-          <br>
+        <% @product = Product.find(id) %>
+        <p><%= @product.name %></p>
+        <p>Quantity: <%= quantity %></p>
+        <p>Price: <%= @product.price %> EUR</p>
+        <br>
 
-      <% total += quantity * @inventory.price %>
-    <% end %>
+        <% total += quantity * @product.price %>
+      <% end %>
     <p>Total: <%= total %> &euro;</p>
   </div>
 </section>
