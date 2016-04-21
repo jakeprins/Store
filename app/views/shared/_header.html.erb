@@ -1,0 +1,28 @@
+<header>
+  <div class="row text-center">
+    <div class="container">
+      <p>Crescendo</p>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="container">
+      <ul class="navbar no-bullets">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Categories", categories_path %></li>
+        <li><%= link_to "Products", inventory_index_path %></li>
+        <li><%= link_to "My cart", shopping_cart_items_path %></li>
+        <li><a href="#">Reviews</a> </li>
+        <% if !user_signed_in? %>
+
+          <li><%= link_to "Log in", new_user_session_path %></li>
+
+        <% else %>
+
+          <li><span><%= current_user.email %> | <%= current_user.name %></li></span>
+          <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</header>

@@ -1,41 +1,48 @@
-.container-fluid {
-  background-color: #0d0d0d;
+header {
+  background: #0d0d0d;
   position: fixed;
-  width: 100%;
-  top: 0px;
+  top: -30px;
   left: 0px;
+  width: 100%;
 }
 
-.storename p {
-  text-align: center;
-  font-family: 'Monsieur La Doulaise', cursive;
-  font-size: 50px;
-  color: white;
+.no-bullets {
+  list-style-type: none;
 }
 
-.navbar .nav {
-  margin-top: -50px;
+.text-center .navbar {
+ text-align: center;
+}
+
+.text-center .navbar {
+  border-top: 1px solid #b7864e;
+  border-bottom: 1px solid #b7864e;
   padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.text-center .container p {
   text-align: center;
-  border-top:1px solid #b7864e;
-}
-
-.nav li {
-  display: inline;
-  list-style: none;
-  color:#b7864e;
-  text-transform: uppercase;
-  margin-right: 40px;
-}
-
-.nav li a:hover {
+  margin-bottom: -15px;
   color: white;
+  font-size: 60px;
+  font-family: "Monsieur La Doulaise", cursive;
 }
 
-.nav li a:visited {
-  display: inline;
-  list-style: none;
-  color:#b7864e;
-  text-transform: uppercase;
-  margin-right: 40px;
+.text-center .navbar li {
+ display: inline;
+ margin-right: 35px;
+ text-decoration: none;
+ text-transform: uppercase;
+ color: white;
 }
+
+a:link, :visited, :active {
+    color: #b7864e;
+    text-decoration: none;
+ }
+
+ a:hover {
+     color: white;
+     text-decoration: none;
+ }
