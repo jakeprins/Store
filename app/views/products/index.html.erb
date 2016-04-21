@@ -8,17 +8,17 @@
 <h1>Products</h1>
 </div>
 
-<% @inventory.each do |inventory| %>
-<p style=text><%= inventory.name %></p>
-<p><%= inventory.description %></p>
+<% @product.each do |product| %>
+<p style=text><%= product.name %></p>
+<p><%= product.description %></p>
 </p>
 
-<p>€ <%= inventory.price %>,-</p>
-<a href="/shopping_cart_items/<%= inventory.id %>">Add to cart</a> 
-<p>Amount left in stock: <%= inventory.quantity %></p>
+<p>€ <%= product.price %>,-</p>
+<a href="/shopping_cart_items/<%= product.id %>">Add to cart</a> 
+<p>Amount left in stock: <%= product.quantity %></p>
 
 <div class="img-rounded">
-<p><%= image_tag(inventory.image) %></p>
+<p><%= image_tag(product.image) %></p>
 </div>
 
 <% end %>
