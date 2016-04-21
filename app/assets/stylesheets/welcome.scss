@@ -2,7 +2,7 @@
   background-image: url('i8.jpg');
   height: 800px;
   background-position: center;
-  background-repeat: no-repeat;
+  top: -50px;
 }
 
 .jumbotron .text p {
@@ -10,8 +10,9 @@
   font-family: "Monsieur La Doulaise", cursive;
   // text-shadow: 1px 1px 1px white;
   font-size: 60px;
-  top: 530px;
-  left: 1100px;
+  top: 480px;
+  left: 800px;
+  color: white;
 }
 // .landing1   {
 //

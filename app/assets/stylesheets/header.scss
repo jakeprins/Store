@@ -1,7 +1,7 @@
 header {
-  background: #0d0d0d;
+  background: #000000;
   position: fixed;
-  top: -30px;
+  top: 0px;
   left: 0px;
   width: 100%;
 }
@@ -22,8 +22,8 @@ header {
 }
 
 .text-center .container p {
+  margin-top: 50px;
   text-align: center;
-  margin-bottom: -15px;
   color: white;
   font-size: 60px;
   font-family: "Monsieur La Doulaise", cursive;
@@ -42,7 +42,7 @@ a:link, :visited, :active {
     text-decoration: none;
  }
 
- a:hover {
+ .text-center .navbar li a:hover {
      color: white;
      text-decoration: none;
  }
