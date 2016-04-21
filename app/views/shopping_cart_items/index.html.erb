@@ -1,16 +1,32 @@
-<h1>Your shopping cart</h1>
+<section class="cart">
+  <div class="row text-center">
+    <div class="container">
+      <div class="col-md-5">&nbsp;</div>
 
-<% total = 0 %>
-<% @shopping_cart.each do |id, quantity| %>
-  <% @product = Product.find(id) %>
-    <p><%= @product.name %></p>
-    <p>Quantity: <%= quantity %></p>
-    <p>Price: <%= @product.price %> EUR</p>
-    <br>
+      <div class="col-md-2">
+        <h1>My shopping cart</h1>
 
-    <% total += quantity * @product.price %>
-<% end %>
-<p>Total: <%= total %> EUR</p>
+        <ul class="nav cart">
+          <li><%= link_to "Clear cart", shopping_cart_items_clear_path %></li>
+          <li><%= link_to "Back",  inventory_index_path %></li>
+        </ul>
+      </div>
 
-<br>
-<%= link_to "Clear cart", shopping_cart_items_clear_path %>
+      <div class="col-md-5">&nbsp;</div>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <% total = 0 %>
+      <% @shopping_cart.each do |id, quantity| %>
+        <% @product = Product.find(id) %>
+        <p><%= @product.name %></p>
+        <p>Quantity: <%= quantity %></p>
+        <p>Price: <%= @product.price %> EUR</p>
+        <br>
+
+        <% total += quantity * @product.price %>
+      <% end %>
+    <p>Total: <%= total %> &euro;</p>
+  </div>
+</section>

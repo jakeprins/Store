@@ -4,21 +4,47 @@
 <%= csrf_meta_tags %>
 
 
-<div class="page-header">
-<h1>Products</h1>
+<div class="container-index">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% @product.each do |product| %>
+      <div class ="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="img-rounded">
+            <p><%= image_tag(product.image, :class => "img-responsive") %></p>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <table class="table">
+            <tr>
+              <td><strong><%= product.name %></strong></td>
+            </tr>
+            <tr>
+              <td><strong>Price</strong></td>
+              <td>€ <%= product.price %>,-</td>
+            </tr>
+            <tr>
+              <td><strong>Amount left in stock</strong></td>
+              <td><%= product.quantity %></td>
+            </tr>
+            <tr>
+              <td>
+                <font color="#ff0000">
+                  <a href="/shopping_cart_items/<%= product.id %>">Add to cart</a>
+                </font>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <p><%= product.description %></p>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
 </div>
-
-<% @product.each do |product| %>
-<p style=text><%= product.name %></p>
-<p><%= product.description %></p>
-</p>
-
-<p>€ <%= product.price %>,-</p>
-<a href="/shopping_cart_items/<%= product.id %>">Add to cart</a> 
-<p>Amount left in stock: <%= product.quantity %></p>
-
-<div class="img-rounded">
-<p><%= image_tag(product.image) %></p>
-</div>
-
-<% end %>
