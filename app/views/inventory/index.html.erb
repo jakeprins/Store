@@ -8,17 +8,47 @@
 <h1>Products</h1>
 </div>
 
-<% @inventory.each do |inventory| %>
-<p style=text><%= inventory.name %></p>
-<p><%= inventory.description %></p>
-</p>
+<div class="container-index">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-<p>€ <%= inventory.price %>,-</p>
-<a href="/shopping_cart_items/<%= inventory.id %>">Add to cart</a> 
-<p>Amount left in stock: <%= inventory.quantity %></p>
+    <% @inventory.each do |inventory| %>
+      <div class ="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="img-rounded">
+            <p><%= image_tag(inventory.image, :class => "img-responsive") %></p>
+          </div>
+        </div>
 
-<div class="img-rounded">
-<p><%= image_tag(inventory.image) %></p>
+        <div class="col-sm-12 col-md-4">
+          <table class="table">
+            <tr>
+              <td><p><strong><%= inventory.name %></strong></p></td>
+            </tr>
+            <tr>
+              <td><strong>Price</strong></td>
+              <td>€ <%= inventory.price %>,-</td>
+            </tr>
+            <tr>
+              <td><strong>Amount left in stock</strong></td>
+              <td><%= inventory.quantity %></td>
+            </tr>
+            <tr>
+              <td>
+                <font color="#ff0000">
+                  <a href="/shopping_cart_items/<%= inventory.id %>">Add to cart</a>
+                </font>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <p><%= inventory.description %></p>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
 </div>
-
-<% end %>
