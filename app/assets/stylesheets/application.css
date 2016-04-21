@@ -16,6 +16,13 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ @import 'welcome';
+
+body {
+  color: white;
+  background: #0d0d0d;
+}
+
  .no-bullets {
    list-style-type: none;
  }
