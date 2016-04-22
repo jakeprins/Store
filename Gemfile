@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
+gem "twitter-bootstrap-rails"
+
+gem 'mail_form'
+gem 'simple_form'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

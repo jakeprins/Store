@@ -11,7 +11,7 @@
         <li><%= link_to "Categories", categories_path %></li>
         <li><%= link_to "Products", products_path %></li>
         <li><%= link_to "My cart", shopping_cart_items_path %></li>
-        <li><a href="#">Reviews</a> </li>
+        <li><%= link_to "Contact", contacts_path %></li>
         <% if !user_signed_in? %>
 
           <li><%= link_to "Log in", new_user_session_path %></li>
