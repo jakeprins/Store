@@ -18,7 +18,7 @@
         </div>
 
         <div class="col-sm-12 col-md-4">
-          <table class="table">
+          <table class="tableIndex">
             <tr>
               <td><strong><%= link_to product.name, product_path(product.id) %></strong></td>
             </tr>
@@ -28,7 +28,7 @@
             </tr>
             <tr>
               <td><strong>Amount left in stock</strong></td>
-              <td><%= product.quantity %></td>
+              <td> <%= product.quantity %></td>
             </tr>
             <tr>
               <td>
