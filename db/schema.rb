@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20160418154628) do
 
   create_table "categories", force: :cascade do |t|
     t.integer  "product_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "name"
   end
 
