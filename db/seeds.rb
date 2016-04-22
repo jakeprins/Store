@@ -1,5 +1,5 @@
 category_names = [
-  "Pianos",
+  "Pianos", 
   "Guitars",
   "Drums",
   "Violins"
