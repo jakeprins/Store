@@ -1,21 +1,15 @@
-<section class="categ">
+<section class="cart">
   <div class="container">
-    <div class="transpr">
+    <div class="trans">
+    <div class="row text-center">
+      <h1>Categories</h1>
 
-        <% @categories.each do |category| %>
-        <div class="col-md-3">
-          <div class="hovereffect">
-            <%= image_tag(category.products.last.image,  class: "categimg") %>
-              <div class="overlay">
-                <p><%= link_to category.name, category_path(category.id) %></p>
-              </div>
-              <br><br><br>
-          </div>
-        </div>
-          <% end %>
-        </div>
+    <% @categories.each do |category| %>
+    <p><%= link_to category.name, category_path(category.id) %></p>
 
-      </div>
-    </div>
-  </div>
+    <% end %>
+</div>
+</div>
+</div>
+</div>
 </section>

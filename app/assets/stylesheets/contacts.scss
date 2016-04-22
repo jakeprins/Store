@@ -8,7 +8,7 @@
 }
 
 .form-inline {
-  color: #b7864e;
+  color: white;
 }
 
 .position {
@@ -39,6 +39,15 @@
   font-family: "Monsieur La Doulaise", cursive;
   font-size: 70px;
   color: white;
+}
+
+.btn {
+  color: black;
+  padding: 5px 40px 5px 40px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 2px solid white;
+  border-radius: 20px
 }
 
 .hidden { display: none; }
