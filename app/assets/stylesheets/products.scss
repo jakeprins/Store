@@ -4,3 +4,15 @@
 .container-index {
   z-index: -1;
 }
+
+.tableIndex {
+      border-collapse: collapse;
+}
+
+.tableIndex, th, td {
+      border: 0px solid black;
+}
+
+a:active {
+    color: white;
+}
