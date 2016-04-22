@@ -1,14 +1,56 @@
+.cart {
+  background-image: url(image_path('i12.jpg'));
+  height: 850px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+ .trans {
+  margin-top: 120px;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 0;
+}
+
 .cart .text-center {
   text-align: center;
 }
 
-.cart h1 {
+.cart .row h3 {
+  margin-top: 30px;
+  font-family: "Monsieur La Doulaise", cursive;
+  font-size: 70px;
+  color: white;
+}
+
+.cart p {
+  list-style: none;
+  // display: inline;
+  // text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+}
+
+.cart p a {
   text-transform: uppercase;
 }
 
-.cart .nav li {
-  list-style: none;
+.cart p a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.cart .btns {
+  padding-left: 40px;
+}
+
+.cart .inline {
   display: inline;
   margin-right: 40px;
-  text-transform: uppercase;
+}
+
+.cart #total {
+  color: white;
+  padding-bottom: 30px;
 }

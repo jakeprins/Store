@@ -1,32 +1,34 @@
 <section class="cart">
-  <div class="row text-center">
-    <div class="container">
-      <div class="col-md-5">&nbsp;</div>
-
-      <div class="col-md-2">
-        <h1>My shopping cart</h1>
-
-        <ul class="nav cart">
-          <li><%= link_to "Clear cart", shopping_cart_items_clear_path %></li>
-          <li><%= link_to "Back",  inventory_index_path %></li>
-        </ul>
+  <div class="container">
+    <div class="trans">
+    <div class="row text-center">
+      <h3>my shopping cart</h3>
+      <br>
+      <div class="btns">
+        <p class="inline"><%= link_to "Back to products",  inventory_index_path %></p>
+        <p class="inline"><%= link_to "Clear cart", shopping_cart_items_clear_path %></p>
       </div>
+      <br><br><br>
 
-      <div class="col-md-5">&nbsp;</div>
     </div>
-  </div>
 
-  <div class="row text-center">
-    <% total = 0 %>
-      <% @shopping_cart.each do |id, quantity| %>
-        <% @inventory = Inventory.find(id) %>
-          <p><%= @inventory.name %></p>
-          <p>Quantity: <%= quantity %></p>
-          <p>Price: <%= @inventory.price %> &euro;</p>
-          <br>
+    <div class="row text-center">
+      <% total = 0 %>
+        <% @shopping_cart.each do |id, quantity| %>
+          <% @inventory = Inventory.find(id) %>
+            <p><%= @inventory.name %></p>
+            <p>Quantity: <%= quantity %></p>
+            <p>Price: <%= @inventory.price %> &euro;</p>
+            <br>
 
-      <% total += quantity * @inventory.price %>
-    <% end %>
-    <p>Total: <%= total %> &euro;</p>
+            <% total += quantity * @inventory.price %>
+            <% end %>
+            <br><br>
+
+            <p class="op" id="total">Total: <%= total %> &euro;</p>
+            <br><br>
+            <p></p>
+      </div>
+    </div>
   </div>
 </section>
