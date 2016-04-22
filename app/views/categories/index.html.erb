@@ -1,6 +1,6 @@
 <h1>Categories</h1>
 
 <% @categories.each do |category| %>
-<p><a href="categories/show"><%= category.name %></a></p>
+<p><%= link_to category.name, category_path(category.id) %></p>
 
 <% end %>
