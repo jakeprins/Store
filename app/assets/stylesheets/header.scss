@@ -4,6 +4,7 @@ header {
   top: 0px;
   left: 0px;
   width: 100%;
+  z-index: 1;
 }
 
 .no-bullets {
@@ -16,16 +17,16 @@ header {
 
 .text-center .navbar {
   border-top: 1px solid #b7864e;
-  border-bottom: 1px solid #b7864e;
-  padding-top: 20px;
-  padding-bottom: 15px;
+  // border-bottom: 1px solid #b7864e;
+  padding-top: 25px;
+  // padding-bottom: 15px;
 }
 
 .text-center .container p {
   margin-top: 50px;
   text-align: center;
   color: white;
-  font-size: 60px;
+  font-size: 70px;
   font-family: "Monsieur La Doulaise", cursive;
 }
 

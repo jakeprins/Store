@@ -1,16 +1,16 @@
-.jumbotron {
-  background-image: url('i8.jpg');
-  height: 800px;
-  background-position: center;
-  top: -50px;
+.welcome {
+  background-image: url(image_path('i8.jpg'));
+  height: 850px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.jumbotron .text p {
+.welcome .text p {
   position: relative;
   font-family: "Monsieur La Doulaise", cursive;
   // text-shadow: 1px 1px 1px white;
   font-size: 60px;
-  top: 480px;
+  top: 530px;
   left: 800px;
   color: white;
 }
