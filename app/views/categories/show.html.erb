@@ -1,6 +1,16 @@
-<h1><%= @category.name %></h1>
+<section class="cart">
+  <div class="container">
+    <div class="trans">
+    <div class="row text-center">
+
+      <h1><%= @category.name %></h1>
 
 
-<% @category.products.each do |product| %>
-<%= link_to product.name, product_path(product.id) %>
-<% end %>
+      <% @category.products.each do |product| %>
+      <%= link_to product.name, product_path(product.id) %>
+      <% end %>
+    </div>
+  </div>
+  </div>
+  </div>
+  </section>
