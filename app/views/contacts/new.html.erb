@@ -1,7 +1,15 @@
-<div class="position">
-<div align="center">
-  <h3>Send A message to Us</h3>
 
+<section class="cart">
+  <div class="container">
+    <div class="trans">
+    <div class="row text-center">
+      <h3>Send a message to us</h3>
+      <br>
+      <br><br><br>
+    </div>
+
+<div align="center">
+  <form class="form-inline">
   <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
     <%= f.input :name, :required => true %>
     <%= f.input :email, :required => true %>
@@ -11,5 +19,14 @@
       <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
     </div>
   <% end %>
+</form>
+<div class="position">
+  <div class="btns">
+    <p class="inline"><%= link_to "Back to home",  root_path %></p>
+  </div>
+</div>
+  <br><br><br>
 </div>
 </div>
+</div>
+</section
