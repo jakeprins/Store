@@ -27,7 +27,7 @@ categories["Pianos"] = [
     The strings extending away from the keyboard. The action lies beneath
     the strings, and uses gravity as its means of return to a state of rest.",
      2200, 2, "piano.jpg"]
-],
+]
 
 categories["Guitars"] = [
   ["Classic guitar", "Spanish classi guitar for a warm and southren sound", 300, 4, "guitar.jpg"]
