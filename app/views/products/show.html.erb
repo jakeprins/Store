@@ -4,21 +4,21 @@
       <div class="col-xs-6 col-sm-4">
         <div class="thumbnail">
           <p>
-            <%= image_tag(@inventory.image, :class => 'img-responsive') %>
+            <%= image_tag(@product.image, :class => 'img-responsive') %>
           </p>
         </div>
         <table>
           <tr>
             <td><strong>Name</strong></td>
-            <td><%= @inventory.name %></td>
+            <td><%= @product.name %></td>
           </tr>
           <tr>
             <td><strong>Price</strong></td>
-            <td><%= @inventory.price %></td>
+            <td><%= @product.price %></td>
           </tr>
           <tr>
             <td><strong>In stock</strong></td>
-            <td><%= @inventory.quantity %></td>
+            <td><%= @product.quantity %></td>
           </tr>
         </table>
       </div>
@@ -27,7 +27,7 @@
           <strong>Description</strong>
         </p>
         <p>
-          <%= @inventory.description %>
+          <%= @product.description %>
         </p>
       </div
       <div class="col-xs-6 col-sm-4">
@@ -43,4 +43,4 @@
 </div>
 <br>
 <br>
-<%= link_to 'Back', '/inventory/' %>
+<%= link_to 'Back', '/product/' %>

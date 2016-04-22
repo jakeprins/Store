@@ -1,5 +1,5 @@
-class AddImagesToInventory < ActiveRecord::Migration
+class AddImagesToProduct < ActiveRecord::Migration
   def change
-    add_column :inventories, :image, :string
+    add_column :products, :image, :string
   end
 end

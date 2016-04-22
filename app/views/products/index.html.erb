@@ -4,40 +4,36 @@
 <%= csrf_meta_tags %>
 
 
-<div class="page-header">
-<h1>Products</h1>
-</div>
-
 <div class="container-index">
   <div class="container">
     <p id="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <% @inventory.each do |inventory| %>
+    <% @product.each do |product| %>
       <div class ="row">
         <div class="col-sm-12 col-md-4">
           <div class="img-rounded">
-            <p><%= image_tag(inventory.image, :class => "img-responsive") %></p>
+            <p><%= image_tag(product.image, :class => "img-responsive") %></p>
           </div>
         </div>
 
         <div class="col-sm-12 col-md-4">
           <table class="table">
             <tr>
-              <td><p><strong><%= inventory.name %></strong></p></td>
+              <td><strong><%= product.name %></strong></td>
             </tr>
             <tr>
               <td><strong>Price</strong></td>
-              <td>€ <%= inventory.price %>,-</td>
+              <td>€ <%= product.price %>,-</td>
             </tr>
             <tr>
               <td><strong>Amount left in stock</strong></td>
-              <td><%= inventory.quantity %></td>
+              <td><%= product.quantity %></td>
             </tr>
             <tr>
               <td>
                 <font color="#ff0000">
-                  <a href="/shopping_cart_items/<%= inventory.id %>">Add to cart</a>
+                  <a href="/shopping_cart_items/<%= product.id %>">Add to cart</a>
                 </font>
               </td>
             </tr>
@@ -45,7 +41,7 @@
         </div>
 
         <div class="col-sm-12 col-md-4">
-          <p><%= inventory.description %></p>
+          <p><%= product.description %></p>
         </div>
       </div>
     <% end %>

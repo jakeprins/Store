@@ -1,6 +1,6 @@
-class CreateInventories < ActiveRecord::Migration
+class CreateProducts < ActiveRecord::Migration
   def change
-    create_table :inventories do |t|
+    create_table :products do |t|
       t.string :name
       t.text :description
       t.integer :price
