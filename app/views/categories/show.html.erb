@@ -1,16 +1,29 @@
-<section class="cart">
+<section class="prod-in-categ">
   <div class="container">
-    <div class="trans">
     <div class="row text-center">
-
       <h1><%= @category.name %></h1>
+    </div>
 
+    <% @category.products.each do |product| %>
+      <div class ="row">
+        <div class="col-md-2">&nbsp;</div>
 
-      <% @category.products.each do |product| %>
-      <%= link_to product.name, product_path(product.id) %>
+        <div class="col-md-4">
+          <%= image_tag(product.image, :class => "img-responsive img-prod-categ") %>
+        </div>
+
+          <div class="col-md-4">
+            <p id="name"><strong><%= product.name %></strong></p>
+            <p><strong>Price:</strong> € <%= product.price %>,-</p>
+            <p><strong>Amount left in stock:</strong> <%= product.quantity %></p>
+            <p><strong>Description:</strong> <%= product.description %></p>
+
+            <a href="/shopping_cart_items/<%= product.id %>">Add to cart</a>
+          </div>
+
+          <div class="col-md-2">&nbsp;</div>
+        </div>
       <% end %>
     </div>
   </div>
-  </div>
-  </div>
-  </section>
+</section>
