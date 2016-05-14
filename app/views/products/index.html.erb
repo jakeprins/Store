@@ -4,10 +4,12 @@
 <%= csrf_meta_tags %>
 
 <section>
-  <div class="container-index">
+  <div class="all-prod">
     <div class="container">
         <div class ="row">
-          <div class="col-xs-6 col-md-4">
+          <div class="col-md-2">&nbsp;</div>
+
+          <div class="col-md-4">
 
             <%= form_tag '/products', :method => 'get', id: "search-form", class: "input", role:"search" do %>
                 <p>
@@ -17,46 +19,28 @@
             <% end %>
 
           </div>
+
+          <div class="col-md-6">&nbsp;</div>
         </div>
-        <p>
+
         <% @products.each do |product| %>
-          <div class ="row">
-            <div class="col-xs-6 col-md-4">
-              <div class="img-rounded">
-                <p><%= image_tag(product.image, :class => "img-responsive") %></p>
-              </div>
+        <div class ="row">
+          <div class="col-md-2">&nbsp;</div>
+
+          <div class="col-md-4">
+            <%= image_tag(product.image, :class => "img-responsive img-prod-categ") %>
+          </div>
+
+            <div class="col-md-4">
+              <p id="name"><strong><%= product.name %></strong></p>
+              <p><strong>Price:</strong> € <%= product.price %>,-</p>
+              <p><strong>Amount left in stock:</strong> <%= product.quantity %></p>
+              <p><strong>Description:</strong> <%= product.description %></p>
+
+              <a href="/shopping_cart_items/<%= product.id %>">Add to cart</a>
             </div>
 
-            <div class="col-xs-6 col-md-4">
-              <table class="tableIndex">
-                <tr>
-                  <td class=".tableIndex"><strong><%= link_to product.name, product_path(product.id) %></strong></td>
-                </tr>
-                <tr>
-                  <td><strong>Price</strong></td>
-                  <td>€ <%= product.price %>,-</td>
-                </tr>
-                <tr>
-                  <td><strong>Amount left in stock </strong></td>
-                  <td> <%= product.quantity %></td>
-                </tr>
-                <tr>
-                  <td><strong>Description </strong></td>
-                  <td><%= product.description %></td>
-                </tr>
-                <tr>
-                  <td>
-                    <font color="#ff0000">
-                      <a href="/shopping_cart_items/<%= product.id %>">Add to cart</a>
-                    </font>
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="col-sm-12 col-md-4">
-              <p></p>
-            </div>
+            <div class="col-md-2">&nbsp;</div>
           </div>
         <% end %>
     </div>

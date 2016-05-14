@@ -1,30 +1,31 @@
 // Place all the styles related to the Product controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.tableIndex {
-      border-collapse: collapse;
-}
-
-.tableIndex, th, td {
-      border: 0px solid black;
-      padding-top: 10px; padding-bottom:10px
-}
-
-.tableIndex a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-.product {
+.all-prod {
+  margin-top: 230px;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: black;
-  z-index: 1;
 }
 
-.trans {
- margin-top: 120px;
- background-color: black;
- opacity: 0.8;
- z-index: 0;
+.all-prod .row {
+  margin-bottom: 30px;
+}
+
+.all-prod .img-prod-categ {
+  text-align: left;
+  width: 400px;
+  height: 400px;
+}
+
+.all-prod a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#name {
+  color: #b7864e;
 }
 
 .input-field {
